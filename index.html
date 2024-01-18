@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cinema Booking</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div id="cinemaContainer">
+
+			<div class="filmcontainer">
+				<iframe id="trailer" width="340" height="160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+
+			<select name="films" id="films" onchange="SelectFilm()">
+			  <option value="0">Choose</option>
+			  <option value="1">Avengers</option>
+			  <option value="2">Joker</option>
+			  <option value="3">Toy Story</option>
+			  <option value="4">The Lion King</option>
+			</select>
+
+			<div id="last">
+				<span> You have selected </span >
+				<span class="yellow" id="nbSelected">0</span>
+				<span> seats for a price of </span>
+				<span class="yellow" id="priceSelected">0</span>$
+			</div>
+
+			<section class ="chairs">
+				<div class="A block">
+					<div class="chair" id="chair0" onclick="ClickChair('0');"></div>
+					<div class="chair" id="chair1" onclick="ClickChair('1');"></div>
+					<div class="chair" id="chair2" onclick="ClickChair('2');"></div>
+					<div class="chair" id="chair3" onclick="ClickChair('3');"></div>
+					<div class="chair" id="chair4" onclick="ClickChair('4');"></div>
+					<div class="chair" id="chair5" onclick="ClickChair('5');"></div>
+					<div class="chair" id="chair6" onclick="ClickChair('6');"></div>
+					<div class="chair" id="chair7" onclick="ClickChair('7');"></div>
+					<div class="chair" id="chair8" onclick="ClickChair('8');"></div>
+					<div class="chair" id="chair9" onclick="ClickChair('9');"></div>
+					<div class="chair" id="chair10" onclick="ClickChair('10');"></div>
+					<div class="chair" id="chair11" onclick="ClickChair('11');"></div>
+				</div>
+				<div class="B block">
+					<div class="chair" id="chair12" onclick="ClickChair('12');"></div>
+					<div class="chair" id="chair13" onclick="ClickChair('13');"></div>
+					<div class="chair" id="chair14" onclick="ClickChair('14');"></div>
+					<div class="chair" id="chair15" onclick="ClickChair('15');"></div>
+					<div class="chair" id="chair16" onclick="ClickChair('16');"></div>
+					<div class="chair" id="chair17" onclick="ClickChair('17');"></div>
+					<div class="chair" id="chair18" onclick="ClickChair('18');"></div>
+					<div class="chair" id="chair19" onclick="ClickChair('19');"></div>
+					<div class="chair" id="chair20" onclick="ClickChair('20');"></div>
+					<div class="chair" id="chair21" onclick="ClickChair('21');"></div>
+					<div class="chair" id="chair22" onclick="ClickChair('22');"></div>
+					<div class="chair" id="chair23" onclick="ClickChair('23');"></div>
+				</div>
+				<div class="C block">
+					<div class="chair" id="chair24" onclick="ClickChair('24');"></div>
+					<div class="chair" id="chair25" onclick="ClickChair('25');"></div>
+					<div class="chair" id="chair26" onclick="ClickChair('26');"></div>
+					<div class="chair" id="chair27" onclick="ClickChair('27');"></div>
+					<div class="chair" id="chair28" onclick="ClickChair('28');"></div>
+					<div class="chair" id="chair29" onclick="ClickChair('29');"></div>
+					<div class="chair" id="chair30" onclick="ClickChair('30');"></div>
+					<div class="chair" id="chair31" onclick="ClickChair('31');"></div>
+					<div class="chair" id="chair32" onclick="ClickChair('32');"></div>
+					<div class="chair" id="chair33" onclick="ClickChair('33');"></div>
+					<div class="chair" id="chair34" onclick="ClickChair('34');"></div>
+					<div class="chair" id="chair35" onclick="ClickChair('35');"></div>
+				</div>
+				<div class="D block">
+					<div class="chair" id="chair36" onclick="ClickChair('36');"></div>
+					<div class="chair" id="chair37" onclick="ClickChair('37');"></div>
+					<div class="chair" id="chair38" onclick="ClickChair('38');"></div>
+					<div class="chair" id="chair39" onclick="ClickChair('39');"></div>
+					<div class="chair" id="chair40" onclick="ClickChair('40');"></div>
+					<div class="chair" id="chair41" onclick="ClickChair('41');"></div>
+					<div class="chair" id="chair42" onclick="ClickChair('42');"></div>
+					<div class="chair" id="chair43" onclick="ClickChair('43');"></div>
+					<div class="chair" id="chair44" onclick="ClickChair('44');"></div>
+					<div class="chair" id="chair45" onclick="ClickChair('45');"></div>
+					<div class="chair" id="chair46" onclick="ClickChair('46');"></div>
+					<div class="chair" id="chair47" onclick="ClickChair('47');"></div>
+				</div>
+			</section>
+
+			<marquee id="marquee" scrolldelay= "10" scrollamount="2">Choose your movie, then click Star name for more details</marquee>
+
+			<button class="buttonFinishSelect" onclick="AccomplishBooking()">Finish Booking</button>
+
+		</div>
+
+		<div class="card" id="card" style="display: none;">
+			<img id="starImg" width="120px" height="150px" src="" alt="">
+			<h1 id="starName">Shake</h1>
+			<button class="buy-btn" onclick="closeCard()">Close</button>
+		</div>
+
+	</body>
+</html>
